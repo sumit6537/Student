@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+div
+{
+	margin-left: 80px;
+}
+
+table{
+	margin-top: 40px;
+	margin-left: 30px;
+}
+
+tr
+{
+	line-height:30px;
+	backgorund-color(nt)
+}
+
+form
+{
+	border: 1px solid black;
+	margin: 0 auto;
+	width: 50%;
+	height: 350px;
+	vertical-align: center;
+	outline: 5px dotted white;
+	background-color:white;
+}
+

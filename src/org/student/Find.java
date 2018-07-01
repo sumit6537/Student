@@ -120,7 +120,6 @@ public class Find extends HttpServlet {
 						query1=query1.append(" MathsMarks " + mat + maths_Number+ " And");
 				}
 			}
-				System.out.println(b);
 				if(b==false)
 				{
 					
@@ -130,11 +129,11 @@ public class Find extends HttpServlet {
 					else if(query.endsWith("where"))
 						query=query.substring(0, (query.length()-5));
 					
-					System.out.println(query);
+					
 					Class.forName("com.mysql.jdbc.Driver").newInstance();
 					Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Admin@123");
 					Statement stmt2=(Statement) con1.createStatement();
-					ResultSet resultSet=stmt2.executeQuery(query);
+					//ResultSet resultSet=stmt2.executeQuery(query);
 				
 					List<StudentDetails> listStudentDetails=new ArrayList<StudentDetails>();
 					while(resultSet.next())
@@ -147,7 +146,7 @@ public class Find extends HttpServlet {
 						studentDetails.setMathsMarks(resultSet.getInt(5));
 						listStudentDetails.add(studentDetails);
 					}
-					System.out.println("time taken"+ (System.currentTimeMillis() - startTime) +"ms");
+					
 					request.setAttribute("results", listStudentDetails);
 					RequestDispatcher requestDispatcher =request.getRequestDispatcher("View.jsp");
 					requestDispatcher.forward(request, response);

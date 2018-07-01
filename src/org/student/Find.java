@@ -120,7 +120,6 @@ public class Find extends HttpServlet {
 						query1=query1.append(" MathsMarks " + mat + maths_Number+ " And");
 				}
 			}
-				System.out.println(b);
 				if(b==false)
 				{
 					

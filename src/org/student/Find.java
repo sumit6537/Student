@@ -133,7 +133,7 @@ public class Find extends HttpServlet {
 					Class.forName("com.mysql.jdbc.Driver").newInstance();
 					Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Admin@123");
 					Statement stmt2=(Statement) con1.createStatement();
-					ResultSet resultSet=stmt2.executeQuery(query);
+					//ResultSet resultSet=stmt2.executeQuery(query);
 				
 					List<StudentDetails> listStudentDetails=new ArrayList<StudentDetails>();
 					while(resultSet.next())

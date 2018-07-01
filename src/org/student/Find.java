@@ -130,7 +130,7 @@ public class Find extends HttpServlet {
 					else if(query.endsWith("where"))
 						query=query.substring(0, (query.length()-5));
 					
-					System.out.println(query);
+					
 					Class.forName("com.mysql.jdbc.Driver").newInstance();
 					Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Admin@123");
 					Statement stmt2=(Statement) con1.createStatement();

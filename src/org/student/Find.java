@@ -146,7 +146,7 @@ public class Find extends HttpServlet {
 						studentDetails.setMathsMarks(resultSet.getInt(5));
 						listStudentDetails.add(studentDetails);
 					}
-					System.out.println("time taken"+ (System.currentTimeMillis() - startTime) +"ms");
+					
 					request.setAttribute("results", listStudentDetails);
 					RequestDispatcher requestDispatcher =request.getRequestDispatcher("View.jsp");
 					requestDispatcher.forward(request, response);
